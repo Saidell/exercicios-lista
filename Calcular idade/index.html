@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular idade </title>
+</head>
+<body>
+    <script>
+        var d_ano, d_mes, d_dia;
+        d_ano = prompt("Digite o ano do nascimento: ");
+        d_mes = prompt("Digite o mês do nascimento: ");
+        d_dia = prompt("Digite o dia do nascimento: ");
+
+        var data_atual = new Date();
+        var ano_atual = data_atual.getFullYear();
+        //A função getMonth contabiliza Janeiro como = 0
+        var mes_atual = data_atual.getMonth() + 1;
+        var dia_atual = data_atual.getDate();
+
+        var idade = ano_atual - d_ano;
+        if (d_mes > mes_atual) {
+            idade = idade - 1;
+            alert("Sua idade é de: " + idade);
+        }
+        else if (d_mes == mes_atual && d_dia > dia_atual) {
+            idade = idade - 1;
+            alert("Sua idade é de: " + idade);
+        }
+        else {
+            alert("Sua idade é de: " + idade);
+        }
+    </script>
+</body>
+</html>

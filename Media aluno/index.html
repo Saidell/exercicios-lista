@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aluno</title>
+</head>
+<body>
+    <script>
+        var nomealuno= prompt("Digite o nome do aluno:");
+        var nota1= parseInt(prompt("Digite o primeiro número:"));
+        var nota2= parseInt(prompt("Digite o segundo número:"));
+        
+        var media = (nota1 + nota2)/2;
+        if (media >= 6) {
+            alert("Parabéns " + nomealuno + ", você foi aprovado!\n" + "Média final: " + media);
+        }
+        else {
+            alert("Nome do aluno: " + nomealuno + "\nSituação: Reprovado.\n" + "Média final: " + media);
+        }
+    </script>
+</body>
+</html>
